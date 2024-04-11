@@ -6,7 +6,7 @@ Feature: Auto
       | name  | <name>  |
       | power | <power> |
     When I search named "<name>"
-    Then I should not find an auto
+    Then I get same auto "<name>"
     Examples:
       | name  | power |
       | Tesla | 500   |

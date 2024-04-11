@@ -11,8 +11,9 @@ public class ThenStepdefs {
         Assertions.assertEquals(power, testContext.getFoundAuto().getPower());
     }
 
-    @Then("I should not find an auto")
-    public void iShouldNotFindAnAuto() {
-        Assertions.assertNull(testContext.getFoundAuto());
+    @Then("I get same auto {string}")
+    public void igetSameAuto(String name) {
+        Assertions.assertNotNull(testContext.getFoundAuto());
+        Assertions.assertEquals(name, testContext.getFoundAuto().getName());
     }
 }

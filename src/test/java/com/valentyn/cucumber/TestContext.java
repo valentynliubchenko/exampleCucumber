@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 @Getter
@@ -18,7 +17,8 @@ public class TestContext {
     Calculator calculator = new Calculator(0);
 
     private List<Auto> autos = new ArrayList<>();
-    private Auto foundAuto;
+    private Auto foundAuto = new Auto();
+
     public static TestContext getInstance() {
         if (testContext.get() == null) {
             testContext.set(new TestContext());
