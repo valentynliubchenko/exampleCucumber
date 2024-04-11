@@ -37,3 +37,7 @@ Feature: Search for an Auto by name
       | Mercedes | 400   |
     When I search for the auto named "Tesla new"
     Then I should not find an auto
+
+
+
+
